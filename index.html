@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub: Guía Visual Interactiva</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Git & GitHub</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro">Inicio</a></li>
+                <li><a href="#que-es">¿Qué es?</a></li>
+                <li><a href="#comandos">Comandos</a></li>
+                <li><a href="#workflow">Flujo</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="intro">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Control de Versiones con <span class="gradient-text">Git & GitHub</span></h1>
+                <p class="hero-subtitle">Una guía visual interactiva para dominar el trabajo colaborativo</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100M+</span>
+                        <span class="stat-label">Desarrolladores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">330M+</span>
+                        <span class="stat-label">Repositorios</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">#1</span>
+                        <span class="stat-label">Plataforma Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección: ¿Qué es Git? -->
+    <section id="que-es" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">¿Qué es Git y GitHub?</h2>
+            
+            <div class="comparison-grid">
+                <div class="card card-git">
+                    <div class="card-icon">📦</div>
+                    <h3>Git</h3>
+                    <p class="card-description">Sistema de control de versiones distribuido</p>
+                    <ul class="feature-list">
+                        <li>✓ Software local</li>
+                        <li>✓ Código abierto</li>
+                        <li>✓ Creado por Linus Torvalds (2005)</li>
+                        <li>✓ Gestiona historial de cambios</li>
+                        <li>✓ Trabajo offline</li>
+                    </ul>
+                </div>
+
+                <div class="card card-github">
+                    <div class="card-icon">🌐</div>
+                    <h3>GitHub</h3>
+                    <p class="card-description">Plataforma de alojamiento de código</p>
+                    <ul class="feature-list">
+                        <li>✓ Servicio en la nube</li>
+                        <li>✓ Propiedad de Microsoft</li>
+                        <li>✓ Fundado en 2008</li>
+                        <li>✓ Colaboración en equipo</li>
+                        <li>✓ Integración continua</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>🤔 ¿Por qué usar control de versiones?</h4>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <span class="benefit-icon">🕐</span>
+                        <strong>Historial completo</strong>
+                        <p>Vuelve a cualquier versión anterior</p>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">👥</span>
+                        <strong>Colaboración</strong>
+                        <p>Múltiples personas en el mismo proyecto</p>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🔒</span>
+                        <strong>Seguridad</strong>
+                        <p>Backup automático de tu código</p>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🔀</span>
+                        <strong>Experimentación</strong>
+                        <p>Prueba cambios sin riesgo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Comandos Básicos -->
+    <section id="comandos" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Comandos Esenciales de Git</h2>
+            
+            <div class="commands-container">
+                <!-- Configuración Inicial -->
+                <div class="command-category">
+                    <h3 class="category-title">⚙️ Configuración Inicial</h3>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git config --global user.name "Tu Nombre"</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Configura tu nombre de usuario</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git config --global user.email "tu@email.com"</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Configura tu correo electrónico</p>
+                    </div>
+                </div>
+
+                <!-- Crear Repositorio -->
+                <div class="command-category">
+                    <h3 class="category-title">🆕 Crear Repositorio</h3>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git init</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Inicializa un nuevo repositorio Git</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git clone [url]</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Clona un repositorio existente</p>
+                    </div>
+                </div>
+
+                <!-- Cambios Básicos -->
+                <div class="command-category">
+                    <h3 class="category-title">💾 Guardar Cambios</h3>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git status</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Ver estado de los archivos</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git add .</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Añadir todos los archivos al staging</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git commit -m "mensaje"</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Confirmar cambios con mensaje</p>
+                    </div>
+                </div>
+
+                <!-- Ramas -->
+                <div class="command-category">
+                    <h3 class="category-title">🌿 Trabajar con Ramas</h3>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git branch</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Listar todas las ramas</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git checkout -b [nombre]</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Crear y cambiar a nueva rama</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git merge [rama]</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Fusionar rama especificada</p>
+                    </div>
+                </div>
+
+                <!-- Sincronización -->
+                <div class="command-category">
+                    <h3 class="category-title">🔄 Sincronizar</h3>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git push origin [rama]</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Subir cambios al repositorio remoto</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git pull</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Descargar y fusionar cambios remotos</p>
+                    </div>
+                    <div class="command-card" onclick="copyCommand(this)">
+                        <div class="command-header">
+                            <code class="command">git fetch</code>
+                            <button class="copy-btn" title="Copiar">📋</button>
+                        </div>
+                        <p class="command-desc">Descargar cambios sin fusionar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Flujo de Trabajo -->
+    <section id="workflow" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Flujo de Trabajo en Equipo</h2>
+            
+            <div class="workflow-diagram">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Clone</h4>
+                        <p>Clona el repositorio</p>
+                        <code>git clone [url]</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Branch</h4>
+                        <p>Crea tu rama de trabajo</p>
+                        <code>git checkout -b feature/mi-feature</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Develop</h4>
+                        <p>Desarrolla tu código</p>
+                        <code>// Tu código aquí</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Commit</h4>
+                        <p>Guarda tus cambios</p>
+                        <code>git add . && git commit -m "feat: nueva característica"</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Push</h4>
+                        <p>Sube al repositorio</p>
+                        <code>git push origin feature/mi-feature</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h4>Pull Request</h4>
+                        <p>Solicita revisión</p>
+                        <code>En GitHub: New PR</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h4>Review</h4>
+                        <p>El equipo revisa</p>
+                        <code>Comentarios y aprobación</code>
+                    </div>
+                </div>
+                <div class="workflow-arrow">→</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h4>Merge</h4>
+                        <p>Integra los cambios</p>
+                        <code>Merge to main</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consejos de Colaboración -->
+            <div class="tips-section">
+                <h3>💡 Mejores Prácticas para Trabajo en Equipo</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <span class="tip-emoji">📝</span>
+                        <h4>Commits Descriptivos</h4>
+                        <p>Usa mensajes claros: <code>feat:</code>, <code>fix:</code>, <code>docs:</code></p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-emoji">🌿</span>
+                        <h4>Una Rama por Feature</h4>
+                        <p>Mantén cambios organizados en ramas separadas</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-emoji">🔄</span>
+                        <h4>Pull Frecuente</h4>
+                        <p>Mantén tu código actualizado con <code>git pull</code></p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-emoji">👀</span>
+                        <h4>Code Review</h4>
+                        <p>Revisa el código de tus compañeros cuidadosamente</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-emoji">🔀</span>
+                        <h4>Resuelve Conflictos</h4>
+                        <p>Comunícate con el equipo al resolver conflictos</p>
+                    </div>
+                    <div class="tip-card">
+                        <span class="tip-emoji">📚</span>
+                        <h4>Documenta</h4>
+                        <p>Mantén un README.md actualizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Equipo -->
+    <section id="equipo" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">👨‍💻</div>
+                    <h3>Nombre 1</h3>
+                    <p class="member-role">Project Manager</p>
+                    <p class="member-contribution">Coordinación y revisión de PRs</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">👩‍🎨</div>
+                    <h3>Nombre 2</h3>
+                    <p class="member-role">Diseñador Frontend</p>
+                    <p class="member-contribution">CSS y diseño visual</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">👨‍💼</div>
+                    <h3>Nombre 3</h3>
+                    <p class="member-role">Desarrollador</p>
+                    <p class="member-contribution">Estructura HTML y JS</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">👩‍💼</div>
+                    <h3>Nombre 4</h3>
+                    <p class="member-role">Content Writer</p>
+                    <p class="member-contribution">Contenido y documentación</p>
+                </div>
+            </div>
+
+            <!-- Estadísticas del proyecto -->
+            <div class="project-stats">
+                <h3>📊 Estadísticas del Proyecto</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="commits-count">0</div>
+                        <div class="stat-label">Commits Realizados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="pr-count">0</div>
+                        <div class="stat-label">Pull Requests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="lines-count">0</div>
+                        <div class="stat-label">Líneas de Código</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="days-count">0</div>
+                        <div class="stat-label">Días de Desarrollo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Proyecto Académico</h4>
+                    <p>Universidad Continental</p>
+                    <p>Curso: Construcción de Software</p>
+                    <p>Docente: Ing. Jorge Luis Chumpitaz Vélez</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://git-scm.com/doc" target="_blank">Documentación Git</a></li>
+                        <li><a href="https://docs.github.com" target="_blank">GitHub Docs</a></li>
+                        <li><a href="https://education.github.com/" target="_blank">GitHub Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📧 jchumpitaz@continental.edu.pe</p>
+                    <p>🔗 <a href="https://github.com/tu-repositorio" target="_blank">Ver Repositorio</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Equipo X - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <button id="scrollTop" class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

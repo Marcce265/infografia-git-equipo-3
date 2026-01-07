@@ -1,0 +1,212 @@
+# ===================================
+# .gitignore para Proyecto Web
+# ===================================
+
+# Archivos del Sistema Operativo
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editores e IDEs
+# ===================================
+# Visual Studio Code
+.vscode/
+.vscode-test/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Atom
+.atom/
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Node.js
+# ===================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+logs
+*.log
+
+# Python
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Entornos virtuales
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Java
+# ===================================
+*.class
+*.jar
+*.war
+*.ear
+.mtj.tmp/
+
+# Archivos de Build
+# ===================================
+build/
+dist/
+target/
+*.min.js
+*.min.css
+
+# Dependencias
+# ===================================
+bower_components/
+vendor/
+
+# Archivos temporales
+# ===================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*~
+tmp/
+temp/
+
+# Archivos de caché
+# ===================================
+.cache/
+*.cache
+.sass-cache/
+.npm/
+
+# Archivos de testing
+# ===================================
+coverage/
+.nyc_output/
+*.lcov
+test-results/
+.test-cache/
+
+# Archivos de configuración local
+# ===================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.local.js
+secrets.json
+
+# Base de datos
+# ===================================
+*.sqlite
+*.sqlite3
+*.db
+
+# Archivos compilados
+# ===================================
+*.com
+*.exe
+*.dll
+*.o
+*.a
+*.lib
+*.so
+*.dylib
+
+# Archivos comprimidos
+# ===================================
+# (Descomentar si no quieres versionar estos archivos)
+# *.zip
+# *.tar
+# *.tar.gz
+# *.rar
+# *.7z
+
+# Archivos multimedia grandes
+# ===================================
+# (Descomentar si quieres ignorar archivos multimedia grandes)
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# *.psd
+# *.ai
+
+# Documentos temporales
+# ===================================
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+# Carpetas de desarrollo
+# ===================================
+.firebase/
+.vercel/
+
+# Archivos específicos del proyecto
+# ===================================
+# Agrega aquí archivos específicos que quieras ignorar
+# ejemplo: archivo-secreto.txt
+
+# NO ignorar
+# ===================================
+# Si hay archivos que normalmente se ignoran pero quieres incluirlos,
+# usa el signo de exclamación:
+# !archivo-importante.min.js
